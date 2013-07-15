@@ -25,14 +25,10 @@ class Tooo
         }
 
         $reflectionFunction = new \ReflectionFunction($name);
-        $reflectionParameters = $reflectionFunction->getParameters();
-
-        foreach ($reflectionParameters as $parameter) {
-            if ($parameter->isPassedByReference()) {
-                throw new \InvalidArgumentException(
-                    'sorry, it does not support the use of pass-by-reference.'
-                );
-            }
+        if ($this->hasPassedByReference($reflectionFunction)) {
+            throw new \InvalidArgumentException(
+                'sorry, it does not support the use of pass-by-reference.'
+            );
         }
 
         return $reflectionFunction->invokeArgs($arguments);
@@ -48,6 +44,5 @@ class Tooo
         }
 
         return false;
-    }
     }
 }
