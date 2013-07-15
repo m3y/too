@@ -1,0 +1,21 @@
+{
+    "name": "m3y/tooo",
+    "description": "to object-oriented",
+    "keywords": ["testing"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Masaya Ozawa",
+            "email": "ma3ya.ozw+github@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "M3y\\Tooo": "src/"
+        }
+    }
+}
