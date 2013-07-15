@@ -37,4 +37,17 @@ class Tooo
 
         return $reflectionFunction->invokeArgs($arguments);
     }
+
+    public function hasPassedByReference(\ReflectionFunction $reflectionFunction)
+    {
+        $reflectionParameters = $reflectionFunction->getParameters();
+        foreach ($reflectionParameters as $parameter) {
+            if ($parameter->isPassedByReference()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    }
 }
