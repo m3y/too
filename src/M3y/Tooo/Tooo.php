@@ -12,6 +12,8 @@ class Tooo
      * phpに定義されている関数をオブジェクトのメソッドとして利用できるようにする。<br />
      * ただし、値渡しで実行される関数のみ。
      *
+     * @throws BadFunctionCallException if the function is not defined
+     * @throws InvalidArgumentException if the arguments is passed by reference
      * @param  string $name      関数名
      * @param  array  $arguments 関数の引数
      * @return mixed  実行結果
