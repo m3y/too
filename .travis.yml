@@ -5,7 +5,7 @@ php:
 before_script:
   - composer install --dev
 script:
-  - make -p build/logs
+  - mkdir -p build/logs
   - phpunit --coverage-clover build/logs/clover.xml --configuration tests/phpunit.xml tests
 after_script:
   - php vendor/bin/coveralls -v
