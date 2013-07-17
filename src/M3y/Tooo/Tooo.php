@@ -35,22 +35,6 @@ class Tooo
     }
 
     /**
-     * preg_match.
-     */
-    public function preg_match($pattern, $subject, array &$matches=array(), $flags=0, $offset=0)
-    {
-        return preg_match($pattern, $subject, $matches, $flags, $offset);
-    }
-
-    /**
-     * preg_match_all.
-     */
-    public function preg_match_all($pattern, $subject, array &$matches=array(), $flags=PREG_PATTERN_ORDER, $offset=0)
-    {
-        return preg_match_all($pattern, $subject, $matches, $flags, $offset);
-    }
-
-    /**
      * 参照渡し引数の確認。
      *
      * @param object ReflectionFunction $reflectionFunction

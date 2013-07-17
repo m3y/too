@@ -69,34 +69,4 @@ class ToooTest extends \PHPUnit_Framework_TestCase
         $array = array();
         $this->oo->each($array);
     }
-
-    /**
-     * @test
-     */
-    public function 対応している参照渡しの関数を実行できること_preg_match()
-    {
-        $expected = array();
-        $expected_return = preg_match('/([a-z]+)/', 'test010101', $expected);
-
-        $actual = array();
-        $actual_return = $this->oo->preg_match('/([a-z]+)/', 'test010101', $actual);
-
-        $this->assertSame($expected_return, $actual_return);
-        $this->assertSame($expected, $actual);
-    }
-
-    /**
-     * @test
-     */
-    public function 対応している参照渡しの関数を実行できること_preg_match_all()
-    {
-        $expected = array();
-        $expected_return = preg_match_all('/([a-z]+)/', 'test010101hogehoge', $expected);
-
-        $actual = array();
-        $actual_return = $this->oo->preg_match_all('/([a-z]+)/', 'test010101hogehoge', $actual);
-
-        $this->assertSame($expected_return, $actual_return);
-        $this->assertSame($expected, $actual);
-    }
 }
