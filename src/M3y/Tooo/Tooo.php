@@ -7,24 +7,21 @@ namespace M3y\Tooo;
 class Tooo
 {
     /**
-     * 関数の実行。
-     *
-     * phpに定義されている関数をオブジェクトのメソッドとして利用できるようにする。<br />
-     * ただし、値渡しで実行される関数のみ。
+     * run pass-by-value function.
      *
      * @throws BadFunctionCallException if the function is not defined
      * @throws InvalidArgumentException if the arguments is passed by reference
-     * @param  string $name      関数名
-     * @param  array  $arguments 関数の引数
-     * @return mixed  実行結果
+     * @param  string $functionName
+     * @param  array  $arguments
+     * @return mixed  execution result
      */
-    public function __call($name, $arguments)
+    public function __call($functionName, $arguments)
     {
-        if (!function_exists($name)) {
-            throw new \BadFunctionCallException("undefined function. [$name]");
+        if (!function_exists($functionName)) {
+            throw new \BadFunctionCallException("undefined function. [$functionName]");
         }
 
-        $reflectionFunction = new \ReflectionFunction($name);
+        $reflectionFunction = new \ReflectionFunction($functionName);
         if ($this->hasPassedByReference($reflectionFunction)) {
             throw new \InvalidArgumentException(
                 'sorry, it does not support the use of pass-by-reference.'
@@ -35,10 +32,10 @@ class Tooo
     }
 
     /**
-     * 参照渡し引数の確認。
+     * confirmation of pass-by-reference function.
      *
      * @param object ReflectionFunction $reflectionFunction
-     * @return bool 確認結果
+     * @return bool  confirmation result
      */
     private function hasPassedByReference(\ReflectionFunction $reflectionFunction)
     {
