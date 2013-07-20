@@ -64,7 +64,7 @@ class ToooTest extends \PHPUnit_Framework_TestCase
      * @test
      * @expectedException InvalidArgumentException
      */
-    public function 未対応の参照渡しの関数の場合、例外が投げられること()
+    public function 参照渡しの関数の場合、例外が投げられること()
     {
         $array = array();
         $this->oo->each($array);
