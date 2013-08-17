@@ -9,7 +9,7 @@
          stopOnFailure="false"
          syntaxCheck="false"
          verbose="false">
-    <testsuite name="M3y\Tooo Test Suite">
+    <testsuite name="M3y\Too Test Suite">
         <directory>.</directory>
     </testsuite>
 </phpunit>

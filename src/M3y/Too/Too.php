@@ -1,10 +1,10 @@
 <?php
-namespace M3y\Tooo;
+namespace M3y\Too;
 
 /**
- * To object-oriented.
+ * To object.
  */
-class Tooo
+class Too
 {
     /**
      * run pass-by-value function.

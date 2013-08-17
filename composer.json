@@ -1,6 +1,6 @@
 {
-    "name": "m3y/tooo",
-    "description": "to object-oriented",
+    "name": "m3y/too",
+    "description": "to object",
     "keywords": ["testing"],
     "type": "library",
     "license": "MIT",
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-0": {
-            "M3y\\Tooo": "src/"
+            "M3y\\Too": "src/"
         }
     }
 }

@@ -1,18 +1,18 @@
 <?php
-namespace M3y\Tooo\ToooTest;
+namespace M3y\Too\TooTest;
 
-use M3y\Tooo\Tooo;
+use M3y\Too\Too;
 
-class ToooTest extends \PHPUnit_Framework_TestCase
+class TooTest extends \PHPUnit_Framework_TestCase
 {
-    private $oo;
+    private $object;
 
     /**
      * setup.
      */
     public function setUp()
     {
-        $this->oo = new Tooo;
+        $this->object = new Too;
     }
 
     /**
@@ -22,7 +22,7 @@ class ToooTest extends \PHPUnit_Framework_TestCase
     {
         // strtoupper
         $expected = strtoupper("Test_Value");
-        $this->assertSame($expected, $this->oo->strtoupper('Test_Value'));
+        $this->assertSame($expected, $this->object->strtoupper('Test_Value'));
     }
 
     /**
@@ -32,7 +32,7 @@ class ToooTest extends \PHPUnit_Framework_TestCase
     {
         // strtolower
         $expected = strtolower("tEST_vALUE");
-        $this->assertSame($expected, $this->oo->strtolower('tEST_vALUE'));
+        $this->assertSame($expected, $this->object->strtolower('tEST_vALUE'));
     }
 
     /**
@@ -48,7 +48,7 @@ class ToooTest extends \PHPUnit_Framework_TestCase
         );
 
         $expected = array_keys($sample);
-        $this->assertSame($expected, $this->oo->array_keys($sample));
+        $this->assertSame($expected, $this->object->array_keys($sample));
     }
 
     /**
@@ -57,7 +57,7 @@ class ToooTest extends \PHPUnit_Framework_TestCase
      */
     public function 定義されていない関数を呼ばれた際に例外が投げられること()
     {
-        $this->oo->undefined();
+        $this->object->undefined();
     }
 
     /**
@@ -67,6 +67,6 @@ class ToooTest extends \PHPUnit_Framework_TestCase
     public function 参照渡しの関数の場合、例外が投げられること()
     {
         $array = array();
-        $this->oo->each($array);
+        $this->object->each($array);
     }
 }
