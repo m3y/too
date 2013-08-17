@@ -3,6 +3,8 @@ namespace M3y\Too;
 
 /**
  * To object.
+ *
+ * @package M3y\Too
  */
 class Too
 {
