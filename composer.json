@@ -4,12 +4,16 @@
     "keywords": ["testing"],
     "type": "library",
     "license": "MIT",
+    "homepage": "https://github.com/m3y/too",
     "authors": [
         {
             "name": "Masaya Ozawa",
             "email": "ma3ya.ozw+github@gmail.com"
         }
     ],
+    "require": {
+        "php": ">=5.3.3"
+    },
     "require-dev": {
         "phpunit/phpunit": "3.7.*@dev",
         "piece/stagehand-testrunner": "3.7.*@dev",
